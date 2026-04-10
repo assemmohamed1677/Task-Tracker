@@ -1,0 +1,4 @@
+<app-add-task  (onAddTask)="addTask($event)"></app-add-task>
+@for (task of tasks; track task.id) {
+  <app-task-item (onToggleReminder)="toggleReminder(task)"  (onDeleteTask)="deleteTask(task)" [task]="task"></app-task-item>
+}
